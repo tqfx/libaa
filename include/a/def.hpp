@@ -1,6 +1,6 @@
 /*!
  @file def.hpp
- @brief algorithm library
+ @brief algorithm library definition
  @copyright Copyright (C) 2020 tqfx, All rights reserved.
 */
 
@@ -91,6 +91,11 @@
 #endif /* __ASM */
 #define A_ASM __asm
 
+/* reset some warnings */
+#if defined(__GNUC__) || defined(__clang__)
+#pragma GCC diagnostic pop
+#endif /* __GNUC__ || __clang__ */
+
 /*! @endcond */
 
 namespace a
@@ -102,10 +107,5 @@ namespace a
 A_PUBLIC const char *version(void);
 
 } // namespace a
-
-/* reset some warnings */
-#if defined(__GNUC__) || defined(__clang__)
-#pragma GCC diagnostic pop
-#endif /* __GNUC__ || __clang__ */
 
 #endif /* __A_DEF_HPP__ */

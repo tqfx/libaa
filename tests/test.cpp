@@ -1,6 +1,6 @@
 /*!
  @file test.cpp
- @brief Testing the algorithm library
+ @brief Testing algorithm library
  @copyright Copyright (C) 2020 tqfx, All rights reserved.
 */
 
